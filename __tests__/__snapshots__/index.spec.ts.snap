@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filterContentByType should be able to extract text from nested document 1`] = `
+Array [
+  Object {
+    "text": "One",
+    "type": "text",
+  },
+  Object {
+    "text": "Two",
+    "type": "text",
+  },
+  Object {
+    "text": "Three",
+    "type": "text",
+  },
+  Object {
+    "text": "Four",
+    "type": "text",
+  },
+  Object {
+    "text": "Five",
+    "type": "text",
+  },
+]
+`;
+
+exports[`filterContentByType should extract valid content only 1`] = `
+Array [
+  Object {
+    "content": Array [
+      Object {
+        "text": "One",
+        "type": "text",
+      },
+    ],
+    "type": "paragraph",
+  },
+  Object {
+    "content": Array [
+      Object {
+        "text": "Two",
+        "type": "text",
+      },
+    ],
+    "type": "paragraph",
+  },
+  Object {
+    "content": Array [
+      Object {
+        "content": Array [
+          Object {
+            "text": "Three",
+            "type": "text",
+          },
+        ],
+        "type": "paragraph",
+      },
+      Object {
+        "content": Array [
+          Object {
+            "content": Array [
+              Object {
+                "text": "Four",
+                "type": "text",
+              },
+            ],
+            "type": "paragraph",
+          },
+        ],
+        "type": "blockquote",
+      },
+      Object {
+        "content": Array [
+          Object {
+            "text": "Five",
+            "type": "text",
+          },
+        ],
+        "type": "paragraph",
+      },
+    ],
+    "type": "blockquote",
+  },
+]
+`;
+
+exports[`filterContentByType should return content filtered by type 1`] = `
+Array [
+  Object {
+    "content": Array [
+      Object {
+        "text": "Hello",
+        "type": "text",
+      },
+    ],
+    "type": "paragraph",
+  },
+  Object {
+    "content": Array [
+      Object {
+        "text": "World",
+        "type": "text",
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`filterContentByType should return empty array if nothing matches 1`] = `Array []`;

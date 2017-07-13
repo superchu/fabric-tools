@@ -17,7 +17,8 @@
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "test": "jest",
-    "test-watch": "jest --watchAll"
+    "test-watch": "jest --watchAll",
+    "lint": "tslint -c tslint.json src/**/*.ts"
   },
   "jest": {
     "transform": {

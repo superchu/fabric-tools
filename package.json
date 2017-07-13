@@ -1,0 +1,33 @@
+{
+  "name": "fabric-tools",
+  "version": "1.0.0",
+  "description": "Tools for working with Fabric Documents",
+  "main": "dist/index.js",
+  "author": "Oscar Wallhult <owallhult@atlassian.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.2",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.7",
+    "tslint": "^5.5.0"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc",
+    "test": "jest",
+    "test-watch": "jest --watchAll"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*.(test|spec)).(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
